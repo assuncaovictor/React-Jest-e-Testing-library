@@ -1,14 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../domain/Home";
 import { App } from "../App";
+import { sidebar } from "./sidebar";
+import Body from "../components/Body";
 
 const router = createBrowserRouter([
     {
         element: <App />,
         children: [
             {
-                path: "/",
-                element: <Home />,
+                element: <Body />,
+                children: sidebar.map(({ path, element }) => {
+                    return {
+                        path,
+                        element,
+                    };
+                }),
             },
         ],
     },

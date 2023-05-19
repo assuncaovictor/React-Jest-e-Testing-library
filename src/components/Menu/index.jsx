@@ -1,24 +1,18 @@
 import React from "react";
 import estilos from "./Menu.module.css";
 import { Link } from "react-router-dom";
-
-const listaMenu = [
-    "Inicial",
-    "Transferências",
-    "Investimentos",
-    "Outros serviços",
-];
+import { sidebar } from "../../config/sidebar";
 
 export default function Menu() {
     return (
         <nav className={estilos.menu}>
-            {listaMenu.map((item, indice) => {
+            {sidebar.map(({ path, text }, indice) => {
                 return (
-                    <div key={item} className={estilos.item}>
-                        <Link to="/" className={estilos.link}>
-                            {item}
+                    <div key={text} className={estilos.item}>
+                        <Link to={path} className={estilos.link}>
+                            {text}
                         </Link>
-                        {indice !== listaMenu.length - 1 && (
+                        {indice !== sidebar.length - 1 && (
                             <div className={estilos.divisor} />
                         )}
                     </div>
