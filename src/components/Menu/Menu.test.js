@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import Menu from "..";
-import { sidebar } from "../../../config/sidebar";
+import Menu from ".";
+import { sidebar } from "../../config/sidebar";
 
 test("Deve renderizar uma lista de links", () => {
 	render(
