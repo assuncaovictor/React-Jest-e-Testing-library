@@ -5,19 +5,18 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "date-fns": "^2.30.0",
+    "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
-    "recoil": "^0.7.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "format": "prettier --write \"src/**/*{.js,.jsx,.css}\"",
+    "format": "prettier --write \"src/**/*{.js,.jsx}\"",
+    "lint": "eslint \"src/**/*{.js,.jsx}\" --quiet",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,10 +38,12 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/dom": "^9.3.0",
-    "@testing-library/user-event": "^14.4.3",
-    "eslint": "^8.40.0",
-    "eslint-config-prettier": "^8.8.0",
-    "prettier": "^2.8.8"
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1"
   }
 }
